@@ -1,0 +1,5 @@
+.jumbotron {
+    padding-top: 6rem;
+    background: var(--bg-gradien, linear-gradient(135deg, rgba(143, 231, 255, 0.50) 0%, rgba(57, 160, 223, 0.50) 100%));
+    ;
+}
