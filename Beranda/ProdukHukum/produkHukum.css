@@ -1,0 +1,48 @@
+.jumbotron {
+    padding-top: 6rem;
+}
+.bodi {
+    background: var(--bg-gradien, linear-gradient(135deg, rgba(143, 231, 255, 0.50) 0%, rgba(57, 160, 223, 0.50) 100%));
+    ;
+}
+
+.galeri{
+    display: flex;
+    align-items: center;
+    column-gap: 20px;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+}
+
+.galeri::-webkit-scrollbar{
+    width: 0;
+}
+.galeri-item{
+    scroll-snap-type: center;
+    min-width: 11rem;
+}
+
+.galeri-image{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    
+}
+
+.box {
+    width: 65rem;
+    /* margin-left: 1rem; */
+    padding: 1rem;
+    border-radius: 20px;
+    background: var(--text-dark-color, #FFF);
+
+    /* Effect Mengambang */
+    box-shadow: 0px 0px 15px 1px rgba(0, 0, 0, 0.25);
+}
+
+
+.jumbotron1{
+    padding-top: 5rem;
+    background: var(--bg-gradien, linear-gradient(135deg, rgba(143, 231, 255, 0.50) 0%, rgba(57, 160, 223, 0.50) 100%));
+    ;
+}

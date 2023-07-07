@@ -1,0 +1,56 @@
+.jumbotron {
+    padding-top: 6rem;
+}
+
+.bodi {
+    background: var(--bg-gradien, linear-gradient(135deg, rgba(143, 231, 255, 0.50) 0%, rgba(57, 160, 223, 0.50) 100%));
+    ;
+}
+
+.box {
+    height: 23rem;
+    padding: auto;
+    width: 3rem;
+    margin: 15px;
+    border-radius: 45px;
+    background: rgba(255, 255, 255, 0.75);
+
+    /* Effect Mengambang */
+    box-shadow: 0px 0px 15px 1px rgba(0, 0, 0, 0.25);
+}
+
+.mono {
+    margin-top: 3rem;
+    margin-left: 7px;
+    margin-right: 7px;
+    padding: 0;
+    background-color: rgba(255, 255, 255, 0.75);
+}
+
+.box1 {
+    height: 34rem;
+    padding: auto;
+    width: 20rem;
+    border-radius: 20px;
+    background: var(--bg-gradien, linear-gradient(135deg, rgba(143, 231, 255, 0.50) 0%, rgba(57, 160, 223, 0.50) 100%));
+}
+
+.ButtonKeca {
+    border-radius: 20px 0px 0px 20px;
+    background: linear-gradient(90deg, #000 0%, rgba(255, 255, 255, 0.00) 100%);
+    width: 15rem;
+    height: 2rem;
+    margin: 10px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+}
+
+.box3 {
+    height: 34rem;
+    padding: auto;
+    width: 38rem;
+    border-radius: 20px;
+    border: 1px solid #1DA1F2;
+    background: var(--text-dark-color, #FFF);
+}
