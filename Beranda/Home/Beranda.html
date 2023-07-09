@@ -5,18 +5,53 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Bootstrap demo</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+    integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+    crossorigin="anonymous" />
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+    integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+    crossorigin="anonymous" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
   <link rel="stylesheet" href="beranda.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <!-- <img src="../category/category.html" alt=""> -->
+  <script>
+    $(document).ready(function () {
+      $("#Category").load("../category/category.html");
+    });
+    $(document).ready(function () {
+      $("#footerContainer").load("../footer/footer.html");
+    });
+    $(document).ready(function () {
+      $("#menuContainer").load("../widgetmenu/widgetmenu.html");
+    });
+    $(document).ready(function () {
+      $("#aparaturContainer").load("../widgetaparatur/widgetaparatur.html");
+    });
+    $(document).ready(function () {
+      $("#pelayananContainer").load("../widgetpelayanan/widgetpelayanan.html");
+    });
+    $(document).ready(function () {
+      $("#videoContainer").load("../widgetvideo/widgetvideo.html");
+    });
+    $(document).ready(function () {
+      $("#anggaranContainer").load("../widgetanggaran/widgetanggaran.html");
+    });
+  </script>
 </head>
 
 <body>
   <!-- Navigation bar -->
   <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top"
     style="background: var(--bg-gradien, linear-gradient(135deg, rgba(143, 231, 255, 0.50) 0%, rgba(57, 160, 223, 0.50) 100%));">
-    <div class="container-fluid">
-      <a class="navbar-brand btn btn-outline-secondary p-2 mb-2 bg-white text-dark" href="#"><img
-          src="../Assets/Category.svg" alt=""></a>
+    <div class="container-xl">
+      <a class="navbar-brand btn btn-outline-secondary p-2 mb-2 bg-white text-dark" data-bs-toggle="offcanvas"
+        href="#offcanvasExample" role="button" aria-controls="offcanvasExample"><img src="../Assets/Category.svg"
+          alt=""></a>
       <div class="d-flex justify-content-center">
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
           aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -48,6 +83,84 @@
     </div>
   </nav>
 
+
+  <!-- offcanvas -->
+  <!-- Category -->
+  <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+    <div class="card-category shadow p-3 mb-5 ">
+      <div class="container-xl  " style="width: 25rem; ">
+        <div class="d-flex flex-wrap">
+          <div class="card shadow bg-body" style="width: 3rem; height: 4rem; margin-top: 20px">
+            <img src="../Assets/logokabupaten.png" class="card-img-top mx-auto d-block" alt="..."
+              style="width: 2rem; height: 2rem; margin-top: 20px" />
+          </div>
+          <div>
+            <div class="border-primary">
+              <h4 class="fw-bold" style="margin-left: 15px; margin-top: 10px">Kecamatan Pringsewu</h4>
+              <div style="margin-left: 15px;">
+                <h6>Jl.Nawatama. kec. Pringsewu, Kabupaten </h6>
+                <h6> Pringsewu, Lampung 35373</h6>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row d-flex justify-content-center">
+          <div class="d-flex flex-wrap text-center">
+            <div class="m-0 p-1">
+              <div class="card shadow bg-body border-primary" style="width: 7rem; height: 7rem; margin-top: 30px">
+                <img src="../Assets/sso.png" class="card-img-top mx-auto d-block" alt="..."
+                  style="width: 3rem;  margin-top: 20px" />
+                <p class="fw-bold">SSO MetaDesa</p>
+              </div>
+            </div>
+            <div class="p-1">
+              <div class="card shadow bg-body border-primary"
+                style="width: 7rem; height: 7rem; margin-top: 30px; margin-left: 10px">
+                <img src="../Assets/Agregatprov.png" class="card-img-top mx-auto d-block" alt="..."
+                  style="width: 3rem; height: 3rem; margin-top: 20px" />
+                <p class="fw-bold">Agregat Prov</p>
+              </div>
+            </div>
+            <div class="p-1">
+              <div class="card shadow bg-body border-primary"
+                style="width: 7rem; height: 7rem; margin-top: 30px; margin-left: 5px">
+                <img src="../Assets/Agregatkab.png" class="card-img-top mx-auto d-block" alt="..."
+                  style="width: 3rem; height: 3rem; margin-top: 20px" />
+                <p class="fw-bold">Agregat Kab</p>
+              </div>
+            </div>
+          </div>
+          <div class="d-flex flex-wrap text-center">
+            <div class="p-1">
+              <div class="card shadow bg-body border-primary" style="width: 7rem; height: 7rem; margin-top: 30px">
+                <img src="../Assets/kehadiran.png" class="card-img-top mx-auto d-block" alt="..."
+                  style="width: 3rem; height: 3rem; margin-top: 20px" />
+                <p class="fw-bold">Kehadiran</p>
+              </div>
+            </div>
+            <div class="p-1">
+              <div class="card shadow bg-body border-primary"
+                style="width: 7rem; height: 7rem; margin-top: 30px; margin-left: 10px">
+                <img src="../Assets/dataaparat.png" class="card-img-top mx-auto d-block" alt="..."
+                  style="width: 3rem; height: 3rem; margin-top: 20px" />
+                <p class="fw-bold">Data Aparat</p>
+              </div>
+            </div>
+            <div class="p-1">
+              <div class="card shadow bg-body border-primary"
+                style="width: 7rem; height: 7rem; margin-top: 30px; margin-left: 5px">
+                <img src="../Assets/bukutamu.png" class="card-img-top mx-auto d-block" alt="..."
+                  style="width: 3rem; height: 3rem; margin-top: 20px" />
+                <p class="fw-bold">Buku Tamu</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
   <!-- header -->
   <section class="jumbotron position-relative">
     <div class="text-wrap d-flex justify-content-center">
@@ -71,19 +184,24 @@
   </section>
 
 
+
   <!-- MAsih rusak di responsive perbaiki nanti -->
-  <div>
-    <div class="position-absolute top-50 start-50 translate-middle mt-5 flex-warp ">
-      <button type="button" class="btn shadow p-3 mb-5 rounded text-light"
-        style="width: 15rem; height: 10rem; margin: 10px; background-color: rgba(8, 174, 74, 1);">
-        <h1>15</h1>
-        <h6>Jumlah Desa dan Kelurahan</h6>
-      </button>
-      <button type="button" class="btn shadow p-3 mb-5 rounded text-light"
-        style="width: 15rem; height: 10rem; margin: 10px; background-color: rgba(29, 161, 242, 1);">
-        <h1>45.249</h1>
-        <h6>Jumlah Penduduk</h6>
-      </button>
+  <div class="container-xl">
+    <div class="row">
+      <div class="col-md-6  d-flex justify-content-evenly">
+        <button type="button" class="btn shadow p-3 mb-5 rounded text-light"
+          style="width: 15rem; height: 10rem; margin: 10px; background-color: rgba(8, 174, 74, 1);">
+          <h1>15</h1>
+          <h6>Jumlah Desa dan Kelurahan</h6>
+        </button>
+      </div>
+      <div class="col-md-6 d-flex justify-content-evenly">
+        <button type="button" class="btn shadow p-3 mb-5 rounded text-light"
+          style="width: 15rem; height: 10rem; margin: 10px; background-color: rgba(29, 161, 242, 1);">
+          <h1>45.249</h1>
+          <h6>Jumlah Penduduk</h6>
+        </button>
+      </div>
     </div>
   </div>
 
@@ -193,79 +311,90 @@
   <!-- Aparatur Kecamatan -->
   <!-- Masih belum responsive -->
 
-  <div>
+  <div class="container-xl">
     <h1 class="text-center">Aparatur Kecamatan</h1>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="card mb-3" style="height: 25rem;">
+          <div class="row g-0">
+            <div class="col-md-4">
+              <img src="../Assets/Camat.png" class="img-fluid rounded-start" alt="...">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h2>Supryo</h2>
+                <button class="btn btn-info">
+                  <h5>Camat</h5>
+                </button>
+                <div class="card-body">
+                  <p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloremque, dicta
+                    aspernatur, inventore temporibus natus voluptas sint laborum dignissimos cum commodi aut debitis,
+                    provident quis? Blanditiis nihil eveniet nostrum ex animi. </p>
+                </div>
+                <div>
+                  <img src="../Assets/FB.png" alt="">
+                  <img src="../Assets/IG.png" alt="">
+                  <img src="../Assets/TWT.png" alt="">
+                </div>
+
+                <div>
+                  <div class="d-flex">
+                    <img src="../Assets/Phone.svg" alt="" style="margin: 5px;">
+                    <p>+62 823 7878 9861</p>
+                  </div>
+                  <div class="d-flex">
+                    <img src="../Assets/Email.svg" alt="" style="margin: 5px;">
+                    <p>supryo@gmail.com</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="d-flex flex-wrap">
+          <div class=" ">
+            <div class="card shadow  mb-5 bg-body " style="width: 9rem; height: 12rem; margin-right: 20px;">
+              <img src="../Assets/Camat.png" class="card-img-top mx-auto d-block" alt="..."
+                style="width: 9rem; height: 12rem;">
+            </div>
+          </div>
+          <div class=" ">
+            <div class="card shadow  mb-5 bg-body " style="width: 9rem; height: 12rem; margin-right: 20px;">
+              <img src="../Assets/Camat.png" class="card-img-top mx-auto d-block" alt="..."
+                style="width: 9rem; height: 12rem;">
+            </div>
+          </div>
+          <div class=" ">
+            <div class="card shadow  mb-5 bg-body " style="width: 9rem; height: 12rem; margin-right: 20px;">
+              <img src="../Assets/Camat.png" class="card-img-top mx-auto d-block" alt="..."
+                style="width: 9rem; height: 12rem;">
+            </div>
+          </div>
+          <div class=" ">
+            <div class="card shadow  mb-5 bg-body " style="width: 9rem; height: 12rem; margin-right: 20px;">
+              <img src="../Assets/Camat.png" class="card-img-top mx-auto d-block" alt="..."
+                style="width: 9rem; height: 12rem;">
+            </div>
+          </div>
+          <div class=" ">
+            <div class="card shadow  mb-5 bg-body " style="width: 9rem; height: 12rem; margin-right: 20px;">
+              <img src="../Assets/Camat.png" class="card-img-top mx-auto d-block" alt="..."
+                style="width: 9rem; height: 12rem;">
+            </div>
+          </div>
+          <div class=" ">
+            <div class="card shadow  mb-5 bg-body " style="width: 9rem; height: 12rem; margin-right: 20px;">
+              <img src="../Assets/Camat.png" class="card-img-top mx-auto d-block" alt="..."
+                style="width: 9rem; height: 12rem;">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     <div class="">
       <div class="d-flex ">
-        <div class="card shadow p-3 mb-5 bg-body rounded  d-flex flex-wrap"
-          style="width: 60rem; height: 30rem; margin: 20px;">
-          <img src="../Assets/Camat.png" class="card-img-top mx-auto d-block" alt="..."
-            style="width: 14rem; height: 24rem;">
-          <div class="card-body">
-            <h5 class="card-text">Suprianto</h5>
-            <a class="btn btn-primary rounded-pill text-black fw-bolder" href="#" role="button"
-              style="background-color: rgba(255, 255, 255, 0.25);" style="margin-right: 4px;">Camat</a>
-            <!-- EROR -->
-            <div class="card-body">
-              <p class="card-text">Lorem ipsum dolor sit amet </p>
-            </div>
-            <div>
-              <img src="../Assets/FB.png" alt="">
-              <img src="../Assets/IG.png" alt="">
-              <img src="../Assets/TWT.png" alt="">
-            </div>
-
-            <div>
-              <div class="d-flex">
-                <img src="../Assets/Phone.svg" alt="" style="margin: 5px;">
-                <p>+62 823 7878 9861</p>
-              </div>
-              <div class="d-flex">
-                <img src="../Assets/Email.svg" alt="" style="margin: 5px;">
-                <p>supryo@gmail.com</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="d-flex flex-wrap">
-
-          <div class=" p-3">
-            <div class="card shadow  mb-5 bg-body " style="width: 9rem; height: 12rem; margin-right: 20px;">
-              <img src="../Assets/Camat.png" class="card-img-top mx-auto d-block" alt="..."
-                style="width: 9rem; height: 12rem;">
-            </div>
-          </div>
-          <div class=" p-3">
-            <div class="card shadow  mb-5 bg-body " style="width: 9rem; height: 12rem; margin-right: 20px;">
-              <img src="../Assets/Camat.png" class="card-img-top mx-auto d-block" alt="..."
-                style="width: 9rem; height: 12rem;">
-            </div>
-          </div>
-          <div class=" p-3">
-            <div class="card shadow  mb-5 bg-body " style="width: 9rem; height: 12rem; margin-right: 20px;">
-              <img src="../Assets/Camat.png" class="card-img-top mx-auto d-block" alt="..."
-                style="width: 9rem; height: 12rem;">
-            </div>
-          </div>
-          <div class=" p-3">
-            <div class="card shadow  mb-5 bg-body " style="width: 9rem; height: 12rem; margin-right: 20px;">
-              <img src="../Assets/Camat.png" class="card-img-top mx-auto d-block" alt="..."
-                style="width: 9rem; height: 12rem;">
-            </div>
-          </div>
-          <div class=" p-3">
-            <div class="card shadow  mb-5 bg-body " style="width: 9rem; height: 12rem; margin-right: 20px;">
-              <img src="../Assets/Camat.png" class="card-img-top mx-auto d-block" alt="..."
-                style="width: 9rem; height: 12rem;">
-            </div>
-          </div>
-          <div class=" p-3">
-            <div class="card shadow  mb-5 bg-body " style="width: 9rem; height: 12rem; margin-right: 20px;">
-              <img src="../Assets/Camat.png" class="card-img-top mx-auto d-block" alt="..."
-                style="width: 9rem; height: 12rem;">
-            </div>
-          </div>
-        </div>
       </div>
     </div>
 
@@ -273,138 +402,225 @@
 
   <!-- Artikel Headline -->
   <!-- Masih belum bisa -->
-  <div>
+  <div class="container-xl ">
     <h1>Artikel Headline</h1>
-    <div>
-      <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <div class="card" style="width: 15rem;">
-              <img src="../Assets/sidodadi.png" class="card-img-top" alt="..." ">
-              <div class=" card-body">
-              <div class="d-flex flex-wrap">
-                <img src="../Assets/Date range.svg" alt="">
-                <p class="card-title">13 Feb 2023</p>
+    <div class="row">
+      <div class="col-12 m-auto">
+        <div class="owl-carousel owl-theme">
+          <div class="item ">
+            <div class="card">
+              <img src="../Assets/sidodadi.png" class="gambar card-img-top" alt="...">
+              <div class="card-body">
+                <div class="d-flex flex-wrap">
+                  <img src="../Assets/Daterange.svg" alt="">
+                  <p class="card-title">13 Feb 2023</p>
+                </div>
+                <p class="card-text">Penyaluran Bantuan Langsung Tunai Dana Desa (BLT-DD) Pekon Podomoro</p>
               </div>
-              <p class="card-text">Pembangunan Kantor Kepala Desa Sidodadi yang mewah</p>
             </div>
           </div>
-        </div>
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <div class="card" style="width: 15rem;">
-              <img src="../Assets/sidodadi2.png" class="card-img-top" alt="..." ">
-              <div class=" card-body">
-              <div class="d-flex flex-wrap">
-                <img src="../Assets/Date range.svg" alt="">
-                <p class="card-title">13 Feb 2023</p>
-              </div>
-              <p class="card-text">Pembangunan Kantor Kepala Desa Sidodadi yang mewah</p>
-            </div>
-          </div>
-        </div>
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <div class="card" style="width: 15rem;">
-              <img src="../Assets/sidodadi3.png" class="card-img-top" alt="..." ">
-              <div class=" card-body">
-              <div class="d-flex flex-wrap">
-                <img src="../Assets/Date range.svg" alt="">
-                <p class="card-title">13 Feb 2023</p>
-              </div>
-              <p class="card-text">Pembangunan Kantor Kepala Desa Sidodadi yang mewah</p>
-            </div>
-          </div>
-        </div>
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <div class="card" style="width: 15rem;">
-              <img src="../Assets/sidodadi4.png" class="card-img-top" alt="..." ">
-              <div class=" card-body">
-              <div class="d-flex flex-wrap">
-                <img src="../Assets/Date range.svg" alt="">
-                <p class="card-title">13 Feb 2023</p>
-              </div>
-              <p class="card-text">Pembangunan Kantor Kepala Desa Sidodadi yang mewah</p>
-            </div>
-          </div>
-        </div>
 
+          <div class="item ">
+            <div class="card">
+              <img src="../Assets/sidodadi2.png" class="gambar card-img-top" alt="...">
+              <div class="card-body">
+                <div class="d-flex flex-wrap">
+                  <img src="../Assets/Daterange.svg" alt="">
+                  <p class="card-title">13 Feb 2023</p>
+                </div>
+                <p class="card-text">Penyaluran Bantuan Langsung Tunai Dana Desa (BLT-DD) Pekon Podomoro</p>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="card">
+              <img src="../Assets/sidodadi3.png" class="gambar card-img-top" alt="...">
+              <div class="card-body">
+                <div class="d-flex flex-wrap">
+                  <img src="../Assets/Daterange.svg" alt="">
+                  <p class="card-title">13 Feb 2023</p>
+                </div>
+                <p class="card-text">Penyaluran Bantuan Langsung Tunai Dana Desa (BLT-DD) Pekon Podomoro</p>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="card">
+              <img src="../Assets/sidodadi4.png" class="gambar card-img-top" alt="...">
+              <div class="card-body">
+                <div class="d-flex flex-wrap">
+                  <img src="../Assets/Daterange.svg" alt="">
+                  <p class="card-title">13 Feb 2023</p>
+                </div>
+                <p class="card-text">Penyaluran Bantuan Langsung Tunai Dana Desa (BLT-DD) Pekon Podomoro</p>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="card">
+              <img src="../Assets/sidodadi4.png" class="gambar card-img-top" alt="...">
+              <div class="card-body">
+                <div class="d-flex flex-wrap">
+                  <img src="../Assets/Daterange.svg" alt="">
+                  <p class="card-title">13 Feb 2023</p>
+                </div>
+                <p class="card-text">Penyaluran Bantuan Langsung Tunai Dana Desa (BLT-DD) Pekon Podomoro</p>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="card">
+              <img src="../Assets/sidodadi4.png" class="gambar card-img-top" alt="...">
+              <div class="card-body">
+                <div class="d-flex flex-wrap">
+                  <img src="../Assets/Daterange.svg" alt="">
+                  <p class="card-title">13 Feb 2023</p>
+                </div>
+                <p class="card-text">Penyaluran Bantuan Langsung Tunai Dana Desa (BLT-DD) Pekon Podomoro</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
       </div>
-      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
-        data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-      </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
-        data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-      </button>
     </div>
   </div>
-  </div>
+
 
   <!-- video -->
-  <div>
-    <h1>Video</h1>
+  <div class="container-xl ">
+    <h1>Artikel Headline</h1>
+    <div class="row">
+      <div class="col-12 m-auto">
+        <div class="owl-carousel owl-theme">
+          <div class="item ">
+            <div class="row g-0">
+              <div class="col-md-5">
+                <div class="card-body">
+                  <h5>Profil Desa</h5>
+                  <h5>Video Provile Pekon Podomoro Pringsewu</h5>
+                  <p class="card-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Excepturi nihil ipsum
+                    perferendis esse impedit repudiandae</p>
+                </div>
+              </div>
+              <div class="col-md-7">
+
+                <img src="../Assets/video.png" class="video img-fluid rounded-start" alt="...">
+              </div>
+            </div>
+          </div>
+
+          <div class="item ">
+            <div class="row g-0">
+              <div class="col-md-5">
+                <div class="card-body">
+                  <h5>Profil Desa</h5>
+                  <h5>Video Provile Pekon Podomoro Pringsewu</h5>
+                  <p class="card-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Excepturi nihil ipsum
+                    perferendis esse impedit repudiandae</p>
+                </div>
+              </div>
+              <div class="col-md-7">
+
+                <img src="../Assets/video1.png" class="video img-fluid rounded-start" alt="...">
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="row g-0">
+              <div class="col-md-5">
+                <div class="card-body">
+                  <h5>Profil Desa</h5>
+                  <h5>Video Provile Pekon Podomoro Pringsewu</h5>
+                  <p class="card-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Excepturi nihil ipsum
+                    perferendis esse impedit repudiandae</p>
+                </div>
+              </div>
+              <div class="col-md-7">
+
+                <img src="../Assets/video.png" class="video img-fluid rounded-start" alt="...">
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="row g-0">
+              <div class="col-md-5">
+                <div class="card-body">
+                  <h5>Profil Desa</h5>
+                  <h5>Video Provile Pekon Podomoro Pringsewu</h5>
+                  <p class="card-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Excepturi nihil ipsum
+                    perferendis esse impedit repudiandae</p>
+                </div>
+              </div>
+              <div class="col-md-7">
+
+                <img src="../Assets/video1.png" class="video img-fluid rounded-start" alt="...">
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
   </div>
 
   <!-- Footer -->
   <div class="jumbotron">
-    <div class="d-flex flex-wrap justify-content-lg-around">
-      <div>
-        <h5>Website Resmi</h5>
-        <hr color="blue" size="7" width="80%">
-        <div class="text-wrap d-flex">
-          <div style="margin: 5px;">
-            <img src="../Assets/640px-Lambang_Kabupaten_Pringsewu 1.png" alt="" style="width: 3rem;">
-          </div>
-          <div>
+    <div class="container-xl">
+      <div class="d-flex flex-wrap justify-content-lg-around">
+        <div>
+          <h5>Website Resmi</h5>
+          <hr color="blue" size="7" width="80%">
+          <div class="text-wrap d-flex">
+            <div style="margin: 5px;">
+              <img src="../Assets/640px-Lambang_Kabupaten_Pringsewu 1.png" alt="" style="width: 3rem;">
+            </div>
+            <div>
 
-            <h6>Kecamatan Pringsewu</h6>
-            <p>Jl.Nawatama. Kec Pringsewu, Kabupaten </p>
-            <p>Pringsewu, Lampung 35373</p>
+              <h6>Kecamatan Pringsewu</h6>
+              <p>Jl.Nawatama. Kec Pringsewu, Kabupaten </p>
+              <p>Pringsewu, Lampung 35373</p>
+            </div>
           </div>
         </div>
-      </div>
-      <div>
         <div>
-          <h5>Hubungi Kami</h5>
-          <hr color="blue" size="7" width="80%%">
-          <div class="d-flex">
-            <img src="../Assets/Phone.svg" alt="" style="margin: 5px;">
-            <p>+62 823 7878 9861</p>
-          </div>
-          <div class="d-flex">
-            <img src="../Assets/Email.svg" alt="" style="margin: 5px;">
-            <p>kecpringsewu@gmail.com</p>
-          </div>
           <div>
-            <img src="../Assets/FB.png" alt="">
-            <img src="../Assets/IG.png" alt="">
-            <img src="../Assets/TWT.png" alt="">
+            <h5>Hubungi Kami</h5>
+            <hr color="blue" size="7" width="80%%">
+            <div class="d-flex">
+              <img src="../Assets/Phone.svg" alt="" style="margin: 5px;">
+              <p>+62 823 7878 9861</p>
+            </div>
+            <div class="d-flex">
+              <img src="../Assets/Email.svg" alt="" style="margin: 5px;">
+              <p>kecpringsewu@gmail.com</p>
+            </div>
+            <div>
+              <img src="../Assets/FB.png" alt="">
+              <img src="../Assets/IG.png" alt="">
+              <img src="../Assets/TWT.png" alt="">
+            </div>
+          </div>
+        </div>
+        <div>
+          <h5>Lokasi Kantor Camat</h5>
+          <hr color="blue" size="7" width="110%">
+          <div>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3972.413405549065!2d104.97152877370785!3d-5.353712253596623!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e4733039a9a7ec9%3A0xad676d04370b901a!2sKantor%20Camat%20Pringsewu!5e0!3m2!1sid!2sid!4v1688472091356!5m2!1sid!2sid"
+              width="250" height="200" style="border:10;" allowfullscreen="" loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"></iframe>
           </div>
         </div>
       </div>
-      <div>
-        <h5>Lokasi Kantor Camat</h5>
-        <hr color="blue" size="7" width="110%">
+      <hr>
+      <div class="d-flex justify-content-between" style="margin-bottom: 0;">
         <div>
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3972.413405549065!2d104.97152877370785!3d-5.353712253596623!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e4733039a9a7ec9%3A0xad676d04370b901a!2sKantor%20Camat%20Pringsewu!5e0!3m2!1sid!2sid!4v1688472091356!5m2!1sid!2sid"
-            width="250" height="200" style="border:10;" allowfullscreen="" loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"></iframe>
+          <p> | Dokumentasi | Tentang | Kontak | Privasi | </p>
         </div>
-      </div>
-    </div>
-    <hr>
-    <div class="d-flex justify-content-between" style="margin-bottom: 0;">
-      <div>
-        <p> | Dokumentasi | Tentang | Kontak | Privasi | </p>
-      </div>
-      <div>
-        <p>Copyright© 2023. MetaDesa, Support By Smart village</p>
+        <div>
+          <p>Copyright© 2023. MetaDesa, Support By Smart village</p>
+        </div>
       </div>
     </div>
   </div>
@@ -413,6 +629,35 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
     crossorigin="anonymous"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+  <!-- Option 1: Bootstrap Bundle with Popper -->
+  <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+    crossorigin="anonymous"></script> -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+    integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+    crossorigin="anonymous"></script>
+  <script>
+    $('.owl-carousel').owlCarousel({
+      loop: true,
+      margin: 15,
+      nav: true,
+
+      responsive: {
+        0: {
+          items: 1
+        },
+        600: {
+          items: 2
+        },
+        1000: {
+          items: 3
+        }
+      }
+    })
+  </script>
 </body>
 
 </html>
